@@ -1,0 +1,25 @@
+doctype html
+html 
+    head 
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body    
+        h1 Custom Object Table: Movies
+        div(style="margin: 10px")
+            a(href="/update-cobj") Add to this table
+        
+        div(style="margin: 10px")
+            table(style="width: 350px")
+                thead 
+                    tr
+                        th Title 
+                        th score
+                        th memo
+                tbody 
+                    each movie in results
+                        tr  
+                            td #{movie.properties.title} 
+                            td #{movie.properties.score} 
+                            td #{movie.properties.memo} 
+            

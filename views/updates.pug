@@ -1,0 +1,21 @@
+doctype html
+html 
+    head 
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body    
+        h1 Update Custom Object Form
+        div(style="margin: 10px")
+            a(href="/") Return to the homepage
+        .form-wrapper
+            //- p User Name: #{userName}
+            h2 Movies
+            form(method="POST")
+                label(for="newTitle") Title
+                input(type="text" name="newTitle" required)
+                label(for="newScore") Score
+                input(type="text" name="newScore" )
+                label(for="newMemo") Memo
+                input(type="text" name="newMemo" )
+                input(type="submit" value="SUBMIT")
